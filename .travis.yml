@@ -19,7 +19,7 @@ before_install:
   - python configure.py --confirm-license
   - make -j 2
   - sudo make install
-  - cd ../virginPyProject
+  - cd ../blankPyProject
 install:
   - pip install -r requirements.txt
 # command to run tests
