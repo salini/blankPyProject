@@ -29,8 +29,9 @@ class RunTestCmd(Command):
         pass
 
     def run(self):
-        sys.exit(os.system("python "+CWD+"/tests/runAllTests.py"))
-
+        res = os.system("python "+CWD+"/tests/runAllTests.py"))
+        if res != 0:
+            sys.exit(1)
 
 cmdclass["run_test"] = RunTestCmd
 
@@ -46,7 +47,9 @@ class RunPyLintCmd(Command):
         pass
 
     def run(self):
-        sys.exit(os.system("pylint myProject"))
+        res = os.system("pylint myProject"))
+        if res != 0:
+            sys.exit(1)
 
 cmdclass["run_pylint"] = RunPyLintCmd
 
